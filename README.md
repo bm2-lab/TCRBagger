@@ -45,7 +45,7 @@ Bag format specification should be like this in python data format:
 ##### * Bags = [bag1,bag2,...,bagn];  
 ##### * bag1 = [peptide,[TCR1,TCR2,...TCRn]]; 
 
-We also provide an example test bag data which is the indenpent experiment 5 validation data set used in our paper.  
+We also provide an example test bag data which is the independent experiment 5 validation data set used in our paper.  
 
     python ./Scripts/run_TCRBagger.py -b ./Data/ExampleBags.pkl -o ./Outputs/Condition1
 ### Condition 2 : peptide with TCR profile based prediction
