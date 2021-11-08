@@ -37,8 +37,9 @@ The overview of TCRBagger architecture and workflow of training and validation a
 
 We provide some examples show you how to use our already trained TCRBagger model to predict the peptide inmmunogenicity.  
 
-### Condition 1 : TCRBagger bag based prediction
-If you have test bags constructed by yourself, then model can directly predict the immunogenicity score for each peptide.  
+### Condition 1 : TCRBagger bag based prediction  
+#### We recommand this type of input, because users can design their own bags based on their personalized algorithm.  
+If you have test bags constructed by yourself, then model can directly predict the immunogenicity score for each peptide. 
 Bag format specification should be like this in python data format:  
   
 ##### * Bags = [bag1,bag2,...,bagn];  
