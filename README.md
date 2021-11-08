@@ -64,7 +64,7 @@ If you don't have peptide list and TCR profile, while individual sequencing data
  
 ##### * Note:  the neoantigen prediction tools we used in the TCRBagger this version is only compatible with MuPeXI.  
 ### TCR attention weight calculation  
-Based on the result from the immunogenicity score of each peptide, deeper analysis for the interpretation of user's intreseted bags can also be performed. We can extract the Attention block in TCRBagger and each TCR attention weight can be calculated. 
+Based on the result from the immunogenicity score of each peptide, deeper analysis for interpretation of user's intreseted bags can also be performed. We can extract the attention block in TCRBagger and each TCR attention weight can be calculated. 
 
 	Usage: ./TCRBaggerVisual.py [OPTIONS]
 	Required:
