@@ -35,7 +35,7 @@ The overview of TCRBagger algorithm construction and application are described a
 		-a --alleles STRING: the individual's HLA alleles, comma separated (default: not used)  
 		-c --cthread INT: the number of threads used to bag embedding (default: 1)  
 
-We provide some examples show you how to use our already trained TCRBagger model to predict the peptide inmmunogenicity.  
+We provide some examples to show you how to use our already trained TCRBagger model to predict the peptide inmmunogenicity.  
 
 ### Condition 1 : bag based prediction  
 #### We recommand this type of input, because users can design their own bags based on their personalized algorithm.  
