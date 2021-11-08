@@ -50,7 +50,7 @@ We also provide an example test bag data which is the independent experiment 5 v
     python ./Scripts/run_TCRBagger.py -b ./Data/ExampleBags.pkl -o ./Outputs/Condition1
 ### Condition 2 : peptide with TCR profile based prediction
 If you have a peptide list and a TCR profile, then TCRBagger can help you construct the bag for each peptide and predict the immunogenicity score for each peptide.  
-The peptide list and TCR profile specification we provide an example for illustration.  
+We provide an example for illustrating the file specification of peptide list and TCR profile .  
 
     python ./Scripts/run_TCRBagger.py -p ./Data/ExamplePeptideList.txt -t ./Data/ExampleTcrList.txt -o ./Outputs/Condition2
 ### Condition 3 : peptide only based prediction
