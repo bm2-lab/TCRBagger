@@ -93,4 +93,6 @@ We give a simple example data to show how to train the TCRBagger.
     python ./Scripts/TCRBagger.py -i1 ./Data/ExampleTraining.pkl -i2 ./Data/ExampleTesting.pkl -l1 ./Data/ExampleTrainingLabels.pkl -l2 ./Data/ExampleTestingLabels.pkl -o ./Outputs/NewModel
 ## Citation
 ## Contacts
-1810994@tongji.edu.cn;2011398@tongji.edu.cn
+1810994@tongji.edu.cn  
+2011398@tongji.edu.cn  
+qiliu@tongji.edu.cn
