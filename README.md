@@ -1,4 +1,4 @@
-# TCRBagger: Learning to evaluate peptide immunogenicity by bagging personalized TCR profile
+# Neopeptide immunogenicity evaluation with weakly-supervised peptide-TCR binding prediction by TCRBagger
 ## Introduction  
 TCRBagger is a multi-instance learning based efficient tool for predicting the immunogenicity of peptide presented by MHC-I molecular by bagging TCR profile.  
   
