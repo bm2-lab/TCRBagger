@@ -5,7 +5,7 @@ TCRBagger is a multi-instance learning based efficient tool for predicting the i
 This model is a combination of CNN extraction layer and gate-attention mechanism which can visualize the importance of each TCR.  
   
 The overview of TCRBagger algorithm construction and application are described as follows:  
-![image](https://user-images.githubusercontent.com/89248357/140674959-1d6fa556-3875-4a95-9fdf-b542c1fab28b.png)
+![Fig1_framework](https://user-images.githubusercontent.com/89248357/208133254-f4ea8017-005e-4ef7-8ca5-437dee501518.png)
 ## Requirements  
 #### python modules:  
 * python == 3.6.2  
