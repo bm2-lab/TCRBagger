@@ -2,7 +2,7 @@ import os
 import joblib
 import random
 import argparse
-
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 # set up the input paramaters
 parser = argparse.ArgumentParser(description="Training TCRBagger from scratch")
 parser.add_argument("-i1","--training",nargs="?",help = "the path to constructed training bags (*.pkl)",type=str,required=True)
@@ -23,7 +23,6 @@ from tensorflow.keras import backend as K
 from tensorflow.keras.optimizers import Adam
 from tensorflow.python.keras.engine import training
 from tensorflow.python.keras.backend_config import floatx
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 
 # gate attention mechanism based block
 class attr_block(Layer):
@@ -78,8 +77,8 @@ os.system(r"python ./Scripts/BagEmbedding.py -i "+args.training+" -o "+args.outp
 os.system(r"python ./Scripts/BagEmbedding.py -i "+args.testing+" -o "+args.output+" -c "+str(args.cthread))
 
 # bag embedding loading
-training = joblib.load(f"{args.output}/{args.input.split('/')[-1].split('.')[0]}Embedding.pkl")
-testing = joblib.load(f"{args.output}/{args.input.split('/')[-1].split('.')[0]}Embedding.pkl")
+training = joblib.load(f"{args.output}/{args.training.split('/')[-1].split('.')[0]}Embedding.pkl")
+testing = joblib.load(f"{args.output}/{args.testing.split('/')[-1].split('.')[0]}Embedding.pkl")
 
 # bag padding
 training = np.array(list(map(bag_padding, training)))
@@ -92,11 +91,9 @@ x = mask_layer(Input)
 conv1 = layers.Conv2D(32,(1,4),activation='relu')(x)
 conv2 = layers.Conv2D(32,(1,4),activation = 'relu')(conv1)
 maxpool1 = layers.MaxPooling2D(pool_size=(1,2))(conv2)
-maxpool1 = layers.Dropout(0.25)(maxpool1)
-maxpool2 = layers.Dropout(0.25)(maxpool1)
+maxpool2 = layers.Dropout(0.50)(maxpool1)
 f1 = tf.reshape(maxpool2,(-1,100,maxpool2.shape[2]*maxpool2.shape[3]))
 f2 = layers.Dense(128,activation='relu')(f1)
-f2 = layers.Dropout(0.25)(f2)
 at2 = attr_block(name='at2')(f2)
 f3 = layers.Dense(1,activation = 'sigmoid')(at2)
 model = keras.Model(inputs=Input,outputs=f3)

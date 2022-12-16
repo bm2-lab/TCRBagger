@@ -2817,7 +2817,7 @@
 ##contig=<ID=HPV-mSD2,length=7300>
 ##reference=file:///var/lib/cwl/job865493790_reference/GRCh38.d1.vd1.fa
 ##bcftools_filterVersion=1.12-21-ga865a16+htslib-1.12-34-g2b68267
-##bcftools_filterCommand=filter -i '(FMT/AF[1:0] >= 0.05  &&  FMT/AD[1:1] >=10)' -o /home/gaoyicheng/pep_tcr_with_gyl/NewWithGYL/Outputs/Condition4/filter.vcf -O v /home/gaoyicheng/pep_tcr_with_gyl/NewWithGYL/Data/soma.vcf.gz; Date=Sat Oct  9 13:59:07 2021
+##bcftools_filterCommand=filter -i '(FMT/AF[1:0] >= 0.05  &&  FMT/AD[1:1] >=10)' -o ./Outputs/Condition4/filter.vcf -O v ./Data/soma.vcf.gz; Date=Fri Dec 16 22:02:52 2022
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	NORMAL	TUMOR
 chr1	10304252	.	C	T	.	PASS	ECNT=1;HCNT=2;MAX_ED=.;MIN_ED=.;NLOD=47.85;TLOD=55.72	GT:AD:AF:ALT_F1R2:ALT_F2R1:FOXOG:QSS:REF_F1R2:REF_F2R1	0/0:168,0:0:0:0:.:5746,0:77:91	0/1:108,25:0.176:16:9:0.36:3656,807:58:50
 chr1	12794207	rs61775051	T	C	.	alt_allele_in_normal;panel_of_normals	DB;ECNT=1;HCNT=4;MAX_ED=.;MIN_ED=.;NLOD=30.41;TLOD=16.72	GT:AD:AF:ALT_F1R2:ALT_F2R1:FOXOG:QSS:REF_F1R2:REF_F2R1	0/0:270,27:0.084:17:10:0.63:8465,882:142:128	0/1:243,17:0.053:8:9:0.471:7678,550:104:139

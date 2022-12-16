@@ -1,37 +1,20 @@
 
-        # VERSION:  MuPeXI 1.2.0
-        # CALL:     ./MuPeXI/MuPeXI.py -v /home/gaoyicheng/pep_tcr_with_gyl/NewWithGYL/Outputs/Condition4/filter.recode.vcf -a HLA-A01:01,HLA-B08:01 -l 9,10,11 -d /home/gaoyicheng/pep_tcr_with_gyl/NewWithGYL/Outputs/Condition4 -o CadidatePep.tsv
-        # DATE:     Saturday 09 of October 2021
-        # TIME:     14:05:52
-        # PWD:      /NFS_home/NFS_home_5/gaoyicheng/pep_tcr_with_gyl/NewWithGYL
+VCFtools - UNKNOWN
+(C) Adam Auton and Anthony Marcketta 2009
 
-        ----------------------------------------------------------------------------------------------------------
-                                                        MuPeX
-        ----------------------------------------------------------------------------------------------------------
+Parameters as interpreted:
+	--vcf ./Outputs/Condition4/filter.vcf
+	--recode-INFO-all
+	--out ./Outputs/Condition4/filter
+	--recode
+	--remove-filtered-all
 
-          Reading protein reference file:            Found 112012 sequences, with 124718749 [9, 10, 11]mers
-                                                           of which 34372350 were unique peptides
-          Reading VEP file:                          Found 92 irrelevant (synonymous) mutation consequences which were discarded
-                                                     Found 50 missense variant mutation(s) 
-                                                           0 insertion(s)
-                                                           0 deletion(s)
-                                                           2 frameshift variant mutation(s)
-                                                     These non-synonymous mutations where found in 49 genes and 148 transcripts
-          Checking peptides:                         140 peptides matched a normal peptide. 
-                                                     0 peptides included unsupported symbols (e.g. *, X, U) and were discarded 
-          Final Result:                              4992 potential mutant peptides
-          MuPeX Runtime:                             0:04:32.912982
-
-        ----------------------------------------------------------------------------------------------------------
-                                                        MuPeI
-        ----------------------------------------------------------------------------------------------------------
-
-          Reading through MuPex file:                Found 4992 peptides of which 2001 were unique
-          Detecting HLA alleles:                     Detected the following 2 HLA alleles:
-                                                        HLA-A01:01,HLA-B08:01
-                                                        of which 2 were unique
-          Running NetMHCpan 4.0:                     Analyzed 2 HLA allele(s)
-                                                     NetMHCpan runtime: 0:01:17.264196
-          MuPeI Runtime:                             0:02:01.542182
-          TOTAL Runtime:                             0:06:44.701829
-          
+Warning: Expected at least 2 parts in FORMAT entry: ID=germline_risk,Description="Evidence indicates this site is germline, not somatic">
+Warning: Expected at least 2 parts in FORMAT entry: ID=PGT,Number=1,Type=String,Description="Physical phasing haplotype information, describing how the alternate alleles are phased in relation to one another">
+Warning: Expected at least 2 parts in FORMAT entry: ID=PID,Number=1,Type=String,Description="Physical phasing ID information, where each unique ID within a given sample (but not across samples) connects records within a phasing group">
+Warning: Expected at least 2 parts in FORMAT entry: ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+Warning: Expected at least 2 parts in INFO entry: ID=RPA,Number=.,Type=Integer,Description="Number of times tandem repeat unit is repeated, for each allele (including reference)">
+After filtering, kept 2 out of 2 Individuals
+Outputting VCF file...
+After filtering, kept 107 out of a possible 244 Sites
+Run Time = 0.00 seconds
