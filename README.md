@@ -54,7 +54,7 @@ The peptide list and TCR profile specification we provide an example for illustr
 
     python ./Scripts/run_TCRBagger.py -p ./Data/ExamplePeptideList.txt -t ./Data/ExampleTcrList.txt -o ./Outputs/Condition2
 ### Condition 3 : Prediction with a peptide list and an individual RNA-seq
-If you only have a peptide list without TCR profile, then TCRBagger can be compatible with the MiXCR which is a developed tool used to predict TCR profile based on the example individual RNA-seq which can be obtained in [SRR5811748](https://trace.ddbj.nig.ac.jp/DRASearch/run?acc=SRR5811748). We downloaded the SRR5811748 fastq files in ./Data/ directory path. Therefore, the peptide immunogenicity score can alse be calculated by predicted TCR profile.
+If you only have a peptide list without TCR profile, then TCRBagger can be compatible with the MiXCR which is a developed tool used to predict TCR profile based on the example individual RNA-seq which can be obtained in [SRR5811748](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR5811748&display=metadata). We downloaded the SRR5811748 fastq files in ./Data/ directory path. Therefore, the peptide immunogenicity score can alse be calculated by predicted TCR profile.
 
     python ./Scripts/run_TCRBagger.py -p ./Data/ExamplePeptideList.txt -r1 ./Data/SRR5811748_1.fastq.gz -r2 ./Data/SRR5811748_1.fastq.gz -o ./Outputs/Condition3
 ### Condition 4 : neoantigen prediction tools + TCRBagger
