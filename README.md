@@ -1,6 +1,6 @@
-# Neo-epitope identification by weakly-supervised peptide-TCR binding prediction
+# Weakly-supervised peptide-TCR binding prediction facilitates neoantigen identification
 ## Introduction  
-TCRBagger is a multi-instance learning based efficient tool for identifying the neo-epitopes presented by HLA-I molecular by bagging TCR profile.  
+TCRBagger is a multi-instance learning based efficient tool for identifying the immunogenic neoantigens presented by HLA-I molecular by bagging TCR profile.  
   
 This model is a combination of CNN extraction layer and gate-attention mechanism which can visualize the importance of each TCR.  
   
