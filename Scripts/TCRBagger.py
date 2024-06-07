@@ -85,15 +85,18 @@ training = np.array(list(map(bag_padding, training)))
 testing = np.array(list(map(bag_padding, testing)))
 
 # TCRBagger construction
-Input = keras.Input(shape=(num_instances,d_model,1),dtype=float)
-mask_layer = layers.Masking(mask_value=[0]*d_model)
+Input = keras.Input(shape=(num_instances,d_model,1),dtype=float) # 构建模型
+mask_layer = layers.Masking(mask_value=[0]*d_model) # 创建MASK层
 x = mask_layer(Input)
-conv1 = layers.Conv2D(32,(1,4),activation='relu')(x)
-conv2 = layers.Conv2D(32,(1,4),activation = 'relu')(conv1)
-maxpool1 = layers.MaxPooling2D(pool_size=(1,2))(conv2)
-maxpool2 = layers.Dropout(0.50)(maxpool1)
+conv1 = layers.Conv2D(32,(1,4),activation='relu')(x) #卷积层
+conv1=layers.Dropout(0.25)(conv1)
+conv2 = layers.Conv2D(32,(1,4),activation = 'relu')(conv1) #卷积层
+conv2=layers.Dropout(0.25)(conv2)
+maxpool1 = layers.MaxPooling2D(pool_size=(1,2))(conv2) # Pooling层
+maxpool2 = layers.Dropout(0.25)(maxpool1)
 f1 = tf.reshape(maxpool2,(-1,100,maxpool2.shape[2]*maxpool2.shape[3]))
-f2 = layers.Dense(128,activation='relu')(f1)
+f2 = layers.Dense(64,activation='relu')(f1)
+f2 = layers.Dropout(0.25)(f2)
 at2 = attr_block(name='at2')(f2)
 f3 = layers.Dense(1,activation = 'sigmoid')(at2)
 model = keras.Model(inputs=Input,outputs=f3)
