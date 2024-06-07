@@ -37,7 +37,7 @@ The overview of TCRBagger algorithm construction and application are described a
 		-a --alleles STRING: the individual's HLA alleles, comma separated (default: not used)  
 		-c --cthread INT: the number of threads used to bag embedding (default: 1)  
 
-We provide some examples show you how to use our already trained TCRBagger model to predict the probability to be a neo-epitope for a peptide. The trained TCRBagger can be downloaded from [this](https://www.tensorflow.org/install/source). Please add this downloaded model into ./Model directory.
+We provide some examples show you how to use our already trained TCRBagger model to predict the probability to be a neo-epitope for a peptide. The trained TCRBagger can be downloaded from [this google drive](https://drive.google.com/drive/u/0/folders/1b4lRCYPSk_0ya4qdxoGoTij_X5h4T7ga). Please add this downloaded model into ./Models directory.
 
 ### Condition 1 : Prediction with customized bags  
 #### We recommand this type of input, because users can design their own bags based on their personalized algorithm.  
