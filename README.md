@@ -1,6 +1,5 @@
 # Weakly-supervised peptide-TCR binding prediction facilitates neoantigen identification
-## DOI
-DOI 10.5281/zenodo.15671768
+[![DOI image](https://zenodo.org/badge/DOI/10.5281/zenodo.15671862.svg)](https://doi.org/10.5281/zenodo.15671862)
 ## Introduction  
 TCRBagger is a multi-instance learning based efficient tool for identifying the immunogenic neoantigens presented by HLA-I molecular by bagging TCR profile.  
   
