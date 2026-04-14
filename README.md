@@ -96,5 +96,6 @@ We give a simple example data to show how to train the TCRBagger.
 
     python ./Scripts/TCRBagger.py -i1 ./Data/ExampleTraining.pkl -i2 ./Data/ExampleTesting.pkl -l1 ./Data/ExampleTrainingLabels.pkl -l2 ./Data/ExampleTestingLabels.pkl -o ./Outputs/NewModel
 ## Citation
+Gao Y, Gao Y, Wu S, Li D, Zhou C, Meng F, Dong K, Zhao X, Li P, Liang A, Liu Q. Weakly supervised peptide-TCR binding prediction facilitates neoantigen identification. Cell Syst. 2025 Oct 15;16(10):101403. doi: 10.1016/j.cels.2025.101403. Epub 2025 Sep 22. PMID: 40987291.
 ## Contacts
 bm2-lab@tongji.edu.cn
